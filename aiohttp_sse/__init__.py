@@ -53,8 +53,8 @@ class EventSourceResponse(StreamResponse):
 
         :param request: regular aiohttp.web.Request.
         """
-        if request.method != "GET":
-            raise HTTPMethodNotAllowed(request.method, ["GET"])
+        # if request.method != "GET":
+        #     raise HTTPMethodNotAllowed(request.method, ["GET"])
 
         if not self.prepared:
             writer = await super().prepare(request)
